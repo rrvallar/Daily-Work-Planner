@@ -78,8 +78,13 @@ textarea {
 
 .hour {
   background-color: red;
+  font-size: 150%;
 }
 
 .text-input {
   background-color: #06aed5;
 }
+
+/* .hour-9 {
+  font-size: 2s00%;
+} */
