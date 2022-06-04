@@ -6,3 +6,5 @@ $(document).ready(function () {
 
 // var now = moment();
 // $("#current-date").
+
+$("planner-container").append();
