@@ -71,10 +71,6 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.test {
-  color: blue;
-}
-
 /* Style Testing  */
 
 /* .hour {
@@ -82,9 +78,9 @@ textarea {
   font-size: 150%;
 } */
 
-.text-input {
+/* .text-input {
   background-color: #06aed5;
-}
+} */
 
 /* .btn {
   height: 100px;
