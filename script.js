@@ -20,7 +20,10 @@ $(document).ready(function () {
 // // });
 // $("button.btn.btn-success").click(function (e) {});
 
+//Save user input to local storage(Need to display only on button click)
+
 let userInput = document.querySelector("#userInput");
+userInput.value = localStorage.getItem("notes");
 userInput.addEventListener("keyup", (event) => {
   localStorage.setItem("notes", event.target.value);
 });
