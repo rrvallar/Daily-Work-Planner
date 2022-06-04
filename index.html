@@ -35,14 +35,21 @@
         <!-- div classes 9am to 6pm -->
         <!-- Includes Save Buttons and Form Groups -->
         <div class="row">
-          <div class="col-md-2 time hour hour-9">9 AM</div>
+          <div class="col-md-2 time hour hour-9" id="9">9 AM</div>
           <div class="col-lg-8 text-input">
             <div class="form-outline mb-4">
-              <textarea class="form-control" id="user" rows="3"></textarea>
+              <textarea
+                class="form-control"
+                name="userInput"
+                id="userInput"
+                rows="3"
+              ></textarea>
             </div>
           </div>
           <div class="col-lg-2">
-            <button type="button" class="btn btn-success saveBtn">Save</button>
+            <button type="button" id="save" class="btn btn-success saveBtn">
+              Save
+            </button>
           </div>
         </div>
         <div class="row">
@@ -126,7 +133,9 @@
             </div>
           </div>
           <div class="col-lg-2">
-            <button type="button" class="btn btn-success saveBtn">Save</button>
+            <button type="button" id="save" class="btn btn-success saveBtn">
+              Save
+            </button>
           </div>
         </div>
         <div class="row">

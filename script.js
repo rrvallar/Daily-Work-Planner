@@ -4,7 +4,23 @@ $(document).ready(function () {
   $("#current-date").text(a);
 });
 
-// var now = moment();
-// $("#current-date").
+// function saveData() {
+//   localStorage = document.getElementsByClassName("btn").value;
+// }
 
-$("planner-container").append();
+// function saveData() {
+//   let input = document.getElementById("userInput").value;
+//   alert(input);
+// }
+
+//TEST
+
+// $("#save").click(function () {
+//   $("#9").css("color", "blue");
+// // });
+// $("button.btn.btn-success").click(function (e) {});
+
+let userInput = document.querySelector("#userInput");
+userInput.addEventListener("keyup", (event) => {
+  localStorage.setItem("notes", event.target.value);
+});
