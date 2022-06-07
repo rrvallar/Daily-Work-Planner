@@ -35,15 +35,12 @@ textarea {
   height: 80px;
   border-top: 1px solid white;
   margin-bottom: 3px;
-  /* font-size: 175%; */
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
-  /* border-top: 1px dashed #000000; */
-  font-family: "Roboto" sans-serif;
-  font-size: 175%;
+  font-size: 150%;
 }
 
 .past {
