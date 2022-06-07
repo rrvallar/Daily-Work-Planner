@@ -22,8 +22,30 @@ $(document).ready(function () {
 
 //Save user input to local storage(Need to display only on button click)
 
+// let userInput = document.querySelector("#userInput");
+// userInput.value = localStorage.getItem("data");
+// $("#save").click(function (event) {
+//   localStorage.setItem("data", event.target.value);
+//   alert("click");
+// });
+
 let userInput = document.querySelector("#userInput");
-userInput.value = localStorage.getItem("notes");
+userInput.value = localStorage.getItem("data");
 userInput.addEventListener("keyup", (event) => {
-  localStorage.setItem("notes", event.target.value);
+  localStorage.setItem("data", event.target.value);
 });
+
+// $("#save").click(function (event) {
+//   localStorage.setItem("data", event.target.value);
+//   console.log("click");
+// });
+
+// var changeColor = new Date();
+//     var hours = changeColor.getHours();
+//     if(hours >= 9 && hours <= 17) {
+//         $(".hour").addClass("present");
+//     } elseif (hours < 9) {
+//         $(".hour").addClass("past");
+//     } else {
+//        $(".hour").addClass("future");
+//     }
