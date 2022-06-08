@@ -2,8 +2,21 @@ $(document).ready(function () {
   //CURRENT DATE AND TIME
   let a = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
   $("#current-date").text(a);
-});
 
+  // add to localStorage the input desc
+  let inputIdTemplate = "userInput";
+  let saveBtnTemplate = "saveBtn";
+  $(":button").click(function () {
+    console.log(this.id.charAt(this.id.length - 1));
+  });
+  //  "hello" 0,1,2,3,4   => length - 1
+});
+// let saveBtn = document.querySelector("#saveBtn");
+// let userInput = document.querySelector("#userInput");
+// userInput.value = localStorage.getItem("data");
+// userInput.addEventListener("keyup", (event) => {
+//   localStorage.setItem("data", event.target.value);
+// });
 // function saveData() {
 //   localStorage = document.getElementsByClassName("btn").value;
 // }
@@ -28,13 +41,6 @@ $(document).ready(function () {
 //   localStorage.setItem("data", event.target.value);
 //   alert("click");
 // });
-let saveBtn = document.querySelector("#saveBtn");
-let userInput = document.querySelector("#userInput");
-
-userInput.value = localStorage.getItem("data");
-userInput.addEventListener("keyup", (event) => {
-  localStorage.setItem("data", event.target.value);
-});
 
 // saveBtn.onClick = function () {
 //   userInput.value = localStorage.getItem("data");
