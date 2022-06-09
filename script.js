@@ -1,55 +1,51 @@
 $(document).ready(function () {
+  function writeDescription() {
+    for (var i = 1; i < 10; i++) {
+      var data = localStorage.getItem(`data${i}`);
+      $(`#userInput${i}`).text(data);
+    }
+  }
+
+  function updateScheduleColor() {
+    let currentHour = moment().format("h");
+    // currentHour = 4;
+    for (var i = 1; i < 10; i++) {
+      var t = $(`.timeFrame-${i}`).text();
+      currentTime = 0;
+      // extract time to get the current times
+      if (t.length == 4) {
+        currentTime = t.slice(0, 2);
+      } else if (t.length == 3) {
+        currentTime = t.slice(0, 1);
+      }
+      // compare time to change color
+      if (currentHour == currentTime) {
+        $(`#userInput${i}`).css("background-color", "green");
+      } else if (currentTime < currentHour) {
+        console.log("color grey");
+        $(`#userInput${i}`).css("background-color", "grey");
+      } else {
+        console.log("color red");
+        $(`#userInput${i}`).css("background-color", "red");
+      }
+    }
+  }
   //CURRENT DATE AND TIME
   let a = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
   $("#current-date").text(a);
 
   // add to localStorage the input desc
-  let inputIdTemplate = "userInput";
-  let saveBtnTemplate = "saveBtn";
   $(":button").click(function () {
-    console.log(this.id.charAt(this.id.length - 1));
+    id = this.id.charAt(this.id.length - 1);
+    // retrieve data from the right textarea
+    var userInput = document.getElementById(`userInput${id}`);
+    // var userInput2 = $(`#userInput${id}`);
+    localStorage.setItem(`data${id}`, userInput.value);
   });
+  writeDescription();
+  updateScheduleColor();
+
+  // Array: ["h", "e", "l", "l", "o"] => Array[5] =error
   //  "hello" 0,1,2,3,4   => length - 1
+  // "hello".charAt(len - 1) => "hello" at index (5 - 1)
 });
-// let saveBtn = document.querySelector("#saveBtn");
-// let userInput = document.querySelector("#userInput");
-// userInput.value = localStorage.getItem("data");
-// userInput.addEventListener("keyup", (event) => {
-//   localStorage.setItem("data", event.target.value);
-// });
-// function saveData() {
-//   localStorage = document.getElementsByClassName("btn").value;
-// }
-
-// function saveData() {
-//   let input = document.getElementById("userInput").value;
-//   alert(input);
-// }
-
-//TEST
-
-// $("#save").click(function () {
-//   $("#9").css("color", "blue");
-// // });
-// $("button.btn.btn-success").click(function (e) {});
-
-//Save user input to local storage(Need to display only on button click)
-
-// let userInput = document.querySelector("#userInput");
-// userInput.value = localStorage.getItem("data");
-// $("#save").click(function (event) {
-//   localStorage.setItem("data", event.target.value);
-//   alert("click");
-// });
-
-// saveBtn.onClick = function () {
-//   userInput.value = localStorage.getItem("data");
-//   userInput.addEventListener("keyup", (event) => {
-//     localStorage.setItem("data", event.target.value);
-//   });
-// };
-
-// $("#save").click(function (event) {
-//   localStorage.setItem("data", event.target.value);
-//   console.log("click");
-// });
