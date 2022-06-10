@@ -5,7 +5,7 @@ $(document).ready(function () {
       $(`#userInput${i}`).text(data);
     }
   }
-
+  //Function to Update color based on current time
   function updateScheduleColor() {
     let currentHour = moment().format("h");
     // currentHour = 4;
